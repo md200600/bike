@@ -1,0 +1,409 @@
+body{
+    background-color: rgb(91,150,168);
+    animation: product 2s;
+}
+ul{
+    background-color: rgb(27,45,55);
+    overflow: hidden;
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+}
+li{
+    float: left;
+}
+li a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 14px 16px;
+    text-align: center;
+}
+.logo-text{
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Showcard Gothic;
+}
+.slider-container {
+    max-width: 90%;
+    margin: 20px auto;
+    overflow: hidden;
+    position: relative;
+}
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.card {
+    flex: 0 0 32%;
+    padding: 10px;
+    text-align: center;
+    background-color: #f7f7f7;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+.card span{
+    color: red;
+    text-decoration: line-through;
+    font-size: 20px;
+}
+.card p{
+    color: green;
+    text-decoration: underline;
+    font-size: 25px;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+.slider-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+.slider-controls button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.slider-controls button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.card button {
+    background-color: coral;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    font-size: 160%;
+    width: 100%;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    .slider {
+        flex-wrap: nowrap;
+    }
+    .card {
+        flex: 0 0 100%;
+    }
+}
+.card a{
+    color: black;
+    text-decoration: none;
+}
+.off {
+    text-align: center;
+    letter-spacing: 3px;
+    color: blue;
+    text-shadow: 1px 1px 20px blue;
+    font-size: 160%;
+    animation: off 4s infinite;
+    padding: 10px;
+}
+
+@keyframes off {
+    0% { text-shadow: 0px 0px 0px blue; transform: rotate(-10deg); }
+    25% { text-shadow: 1px 1px 20px blue; transform: rotate(10deg); }
+    50% { text-shadow: 0px 0px 0px blue; transform: rotate(-10deg); }
+    75% { text-shadow: 1px 1px 20px blue; transform: rotate(10deg); }
+    100% { text-shadow: 0px 0px 0px blue; transform: rotate(-10deg); }
+}
+
+.slider-off{
+    border: 1px solid rgb(23, 172, 172);
+    background-color: rgb(23,172,172);
+    border-radius: 10px;
+    margin: 1px;
+}
+.slider-price{
+    color: red;
+    text-decoration: line-through;
+}
+.slider-price-off{
+    color: green;
+    text-decoration: underline;
+}
+.card-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: 400px;
+    border: none;
+    text-align: center;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #ffffff, #f0f0f0);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.card-main:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card-main img {
+    border-radius: 12px;
+    padding: 10px;
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.card-main:hover img {
+    transform: scale(1.05);
+}
+.card-main a{
+    color: white;
+    text-decoration: none;
+}
+
+.card-main h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin: 5px 0;
+}
+
+.button-63 {
+    align-items: center;
+    background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+    border: 0;
+    border-radius: 8px;
+    box-shadow: rgba(151, 65, 252, 0.3) 0 10px 20px -5px;
+    color: #FFFFFF;
+    font-size: 14px;
+    padding: 15px 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-top: auto;
+}
+
+.button-63:hover {
+    transform: scale(1.05);
+    box-shadow: rgba(151, 65, 252, 0.5) 0 15px 25px -5px;
+}
+
+.search-box {
+    background: linear-gradient(135deg, #0077b6, #00b4d8);
+    color: white;
+    border-radius: 15px;
+}
+
+.search-box h2 {
+    font-weight: bold;
+}
+
+.form-control, .form-select {
+    border-radius: 10px;
+    font-size: 1.1rem;
+}
+
+.btn-primary {
+    background-color: #ff8800;
+    border: none;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #ff6600;
+    transform: scale(1.05);
+}
+
+.cp-buttons{
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    margin-top: 150px;
+}
+.cp-buttons button{
+font-size: 150%;
+width: 40%;
+border: 1px solid orange;
+background-color: orange;
+border-radius: 10px;
+padding: 10px;
+box-shadow: 5px 5px 5px 5px black;
+margin: 5px;
+text-align: left;
+cursor: pointer;
+}
+.cp-buttons a{
+    text-decoration: none;
+    color: white;
+}
+.cp-buttons button:hover{
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    background: none;
+    border-radius: 0px;
+    transition: 0.5s;
+    box-shadow: 5px 5px 10px black;
+}
+.form{
+    border: 1px solid black;
+    background-color: black;
+    display: inline-block;
+    border-radius: 10px;
+    font-size: 110%;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+.form input{
+    font-size:80%;
+}
+.form-in{
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    background: none;
+    border-bottom-color: white;
+}
+.form-sb{
+    width: 10em;
+    background: none;
+    border-color: 1px solid pink;
+    cursor: pointer;
+    color: white;
+    box-shadow: 0px 0px 10px 10px  pink;
+}
+.Login{
+    text-align: center;
+    margin-top: 10em;
+    margin-left: 15em;
+    padding: 6em;
+    border: 1px solid white;
+    display: inline-block;
+    background-color: white;
+    border-radius: 20px;
+}
+.Login a{
+    text-decoration: none;
+    color: white;
+}
+.Login label{
+    font-weight: bolder;
+    font-size: 20px;
+}
+.lg-text{
+    width: 20em;
+    font-size: 1em;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom-color: pink;
+}
+.lg-bt{
+    font-size: 1.5em;
+    width: 6em;
+    background-color: green;
+    color: white;
+}
+.lg-btn{
+    font-size: 1.5em;
+    width: 6em;
+    background-color: red;
+}
+.delete{
+    text-align: center;
+    padding: 10px;
+    margin-left: 18em;
+    margin-top: 11em;
+    border: 1px solid orange;
+    display: inline-block;
+    background-color: orange;
+    border-radius: 20px;
+    color: white;
+}
+.delete button{
+    width: 10em;
+    font-size: 20px;
+}
+.dl-delete{
+    background-color: red;
+    border-color: red;
+}
+.dl-delete a{
+    text-decoration: none;
+    color: white;
+}
+.dl-cancel{
+    background-color: green;
+    border-color: green;
+}
+.dl-cancel a{
+    text-decoration: none;
+    color: white;
+}
+.product {
+animation: product;
+animation-duration: 4s;
+}
+@keyframes product{
+    0%{opacity: 0; transform: translate(0,50px);};
+    75%{opacity: 75};
+    100%{opacity: 100;};
+}
+a:hover {
+    color: #ffc107;
+    text-decoration: underline;
+    text-decoration: none;
+}
+.about{
+    text-align: center;
+    margin: 20px;
+    margin-top: 10em;
+    margin-bottom: 10em;
+    padding: 20px;
+}
+.about img{
+    float: right;
+    margin: 10px;
+    border: 1px solid purple;
+    border-radius: 25%;
+    animation: about 4s infinite;
+}
+@keyframes about {
+    0%{box-shadow: 0px 5px 5px 10px purple; transform: rotate(0deg);}
+    25%{box-shadow: 0px 0px 0px 0px; transform: rotate(50deg);}
+    50%{box-shadow: 0px 5px 5px 10px purple; transform: rotate(100deg);}
+    75%{box-shadow: 0px 0px 0px 0px; transform: rotate(150deg);}
+    100%{box-shadow: 0px 5px 5px 10px purple; transform: rotate(0deg);}
+}
+.moving-text {
+    color: #ffc107;
+    text-align: center;
+    direction: rtl;
+    animation: bounceText 2s infinite alternate;
+}
+
+@keyframes bounceText {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+footer {
+    color: white;
+    padding: 30px 0;
+    margin-top: 20em;
+    text-align: center;
+    margin-top: 30px;
+}
+.footer-icons img {
+    width: 40px;
+    margin: 5px;
+    transition: transform 0.3s ease;
+}
+.footer-icons img:hover {
+    transform: scale(1.2);
+}
